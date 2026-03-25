@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    forced-color-adjust: none;
+    user-select: none;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Layout centrale con sfondo gradiente della demo. */
+#main-index{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background: linear-gradient(135deg, #c41c3b 0%, #ff6b6b 100%);
+    width: 100%;
+}
+
+/* Card principale del generatore password. */
+#pw-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 600px;
+    height: auto;
+    min-height: 400px;
+    background: #FFF5F0;
+    box-shadow: 0px 10px 14px rgba(100, 0, 20, 0.35);
+    gap: 15px;
+    border-radius: 7px
+}
+
+/* Testo risultato prima e dopo la generazione. */
+.par-result{
+    opacity: 0.5;
+    color: grey;
+    user-select: text;
+    font-size: 40px
+}
+
+.par-result.clicked{
+    opacity: 1;
+    color: #c41c3b;
+    text-shadow: 1px 1px 2px grey;
+}
+
+/* Varianti tipografiche del titolo. */
+#titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+/* Bottone principale di azione. */
+.buttons{
+    width: 120px;
+    background: #ff6b6b;
+    height: 50px;
+    border: transparent;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.buttons:hover{
+    background: #c41c3b;
+    scale: 1.1;
+    
+}
+
+    /* Contenitore del gruppo pulsanti. */
+#button-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#tit2{
+    font-size: 30px;
+    font-style: italic;
+    text-shadow: 1px 1px 2px grey;
+}
+
+#tit1{
+    font-size: 60px;
+    text-shadow: 1px 1px 2px grey;
+}
+
+
+
+/* Header e footer condividono lo stesso stile cromatico. */
+.footer-header{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2E1F1F;
+    color: #FFF5F0;
+}
+
+#footer{
+    border-top: 1px solid #FFF5F0;
+}
+
+#header{
+    border-bottom: 1px solid #FFF5F0;
+}

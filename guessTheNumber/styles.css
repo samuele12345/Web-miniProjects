@@ -1,0 +1,150 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    forced-color-adjust: none;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+#main-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 200px auto;
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15); 
+    background: #f5f5f5;
+    padding: 0px 100px;
+}
+
+#guess-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width:400px;
+    margin: 30px auto;
+    border: 0px 1px 0px 1px solid black;
+    z-index: 100;
+    position: relative;
+}
+
+#guess-div.guess{
+    animation: guess 5s;
+}
+
+/* Vibrazione iniziale, uscita a destra, teletrasporto a sinistra e rientro al centro. */
+@keyframes guess{
+    0%{
+        /* Stato base: nessuno spostamento. */
+        transform: translateX(0px);
+        left: 0px;
+    }
+    10%{
+        transform: translateX(-10px);
+    }
+    20%{
+        transform: translateX(10px);
+    }
+    30%{
+        transform: translateX(-10px);
+    }
+    40%{
+        transform: translateX(10px);
+    }
+    49.999%{
+        /*
+           Prima della corsa verso destra chiudiamo la vibrazione e torniamo al centro.
+           In questo modo il movimento successivo parte da una posizione prevedibile.
+        */
+        transform: translateX(0px);
+        left: 0px;
+    }
+    75%{
+        /*
+           Uscita rapida verso destra usando transform.
+           Uso vw per garantire che il blocco superi il bordo schermo a ogni larghezza.
+        */
+        transform: translateX(120vw);
+        left: 0px;
+    }
+    75.0001%{
+        /*
+           Teletrasporto istantaneo a sinistra:
+           1) resetto transform a 0, altrimenti resterebbe il +120vw del frame 70%
+              e la posizione reale diventerebbe left(-120vw) + transform(+120vw), quindi
+              il blocco finirebbe vicino al centro invece che fuori schermo a sinistra.
+           2) imposto left a -120vw per posizionarlo chiaramente fuori schermo.
+           Dal 75.0001% al 100% il browser interpola left da -120vw a 0: questo e il rientro
+           in slide da sinistra verso la posizione originale.
+        */
+        transform: translateX(0px);
+        left: -120vw;
+    }
+    100%{
+        /* Fine animazione: ritorno completo allo stato iniziale. */
+        transform: translateX(0px);
+        left: 0px;
+    }
+}
+
+#input{
+    margin: 10px 0px;
+    height: 30px;
+    border: 1px solid grey;
+    padding: 0px 5px;
+    border-radius: 2px;
+}
+
+#input:hover{
+    border: 2px solid #8EC5FF;
+}
+
+#but{
+    border-radius: 30px;
+    width: 100px;
+    height:50px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#but:hover{
+    background: #8EC5FF;
+}
+
+.main-tit{
+    font-size: 40px;
+}
+
+.tit-lat{
+    color: transparent;
+}
+
+.tit-lat.activate{
+    animation: tit-l 5s;
+}
+
+@keyframes tit-l{
+    0%{
+        color: blue;
+        scale: 1;
+    }
+    25%{
+        scale: 1.2;
+    }
+    50%{
+        scale: 1;
+    }
+    75%{
+        scale: 1.2;
+    }
+    100%{
+        scale: 1;
+        color: transparent;
+    }
+}

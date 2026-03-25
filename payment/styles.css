@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    forced-color-adjust: none;
+    font-family: 'Inter', sans-serif;
+    /* Impedisce la selezione del testo durante il click sulle opzioni. */
+    user-select: none;
+}
+
+/* Layout centrale della pagina. */
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card con aspetto da form di pagamento. */
+#main-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    margin-top: 150px;
+    background: #fffdd0;
+    border: 1px solid transparent;
+    /* box-shadow: offset-x offset-y blur-spread colore; */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* effetto card */
+    border-radius: 10px;
+}
+
+/* Lista verticale delle opzioni di pagamento. */
+#payment-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0px;
+}
+
+/* Titolo con animazione di opacita continua. */
+#title{
+    margin-top: 10px;
+    animation: tit 4s ease-in-out infinite;
+}
+
+@keyframes tit{
+    0%{
+        opacity: 0.4;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0.4;
+    }
+}
+
+/* Bottone principale di invio. */
+#button{
+    margin-bottom: 10px;
+    background: #c8a96e;
+    color: #fff;
+    font-weight: 800;
+    padding: 10px 80px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.2s;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+#button:hover{
+    background: #a8845a;
+    scale: 1.1;
+}
+
+/* Riga cliccabile che contiene radio e nome del metodo. */
+.option-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: auto;
+    gap: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.option-div:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+    scale: 1.1;
+}
+
+.option-div > label:hover{
+    cursor: pointer;
+}
+
+.option-div > input:hover{
+    cursor: pointer;
+}

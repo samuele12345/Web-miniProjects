@@ -1,0 +1,25 @@
+/* Contenitore principale centrato con flex. */
+#main-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Box con input e pulsante. */
+#request-div{
+    margin-top: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    background: linear-gradient(180deg, blue, green);
+}
+
+/* Spazio tra input e bottone. */
+#submit{
+    margin-top: 20px;
+}

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <!--
+            Metadati base pagina:
+            - charset UTF-8 per supporto caratteri estesi
+            - viewport responsive per mobile
+            - CSS caricato prima per evitare flash di layout non stilizzato
+            - JS con defer per eseguirlo dopo il parsing del DOM
+        -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+        <title>Guess the Number</title>
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <!--
+            Struttura principale del gioco:
+            - messaggio di vittoria a sinistra e destra (tit-lat)
+            - card centrale con input e bottone
+            Le classi/ID sono agganciati a CSS e JS per animazioni e logica.
+        -->
+        <div id="main-div">
+            <h1 class="main-tit tit-lat">Your guess was right!</h1>
+            <div id="guess-div" class="activate">
+                <!--
+                    Interfaccia utente minima:
+                    - titolo del minigioco
+                    - range indicativo
+                    - input testo (validato in JS)
+                    - bottone che avvia il controllo del valore inserito
+                -->
+                <h1 class="main-tit">Guess the number!</h1>
+                <h2 id="second-tit">Between 1 and 100</h2>
+                <input type="text" id="input" placeholder="Insert the number...">
+                <button id="but">Guess</button>
+            </div>
+            <h1 class="main-tit tit-lat">Your guess was right!</h1>
+            
+        </div>
+    </body>
+</html>

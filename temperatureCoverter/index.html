@@ -1,0 +1,86 @@
+<html lang="en">
+    <header>
+        <!--
+            Setup base documento:
+            - meta viewport per layout responsive
+            - styles.css per UI e temi termici (cold/medium/warm)
+            - script.js in defer per eseguire il codice quando il DOM e pronto
+        -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+        <title>Temp Converter</title>
+        <script src="script.js" defer></script>
+    </header>
+
+    <body>
+        <!--
+            Classe di stato iniziale: medium.
+            Lo script aggiorna dinamicamente questa classe in base alla temperatura inserita.
+        -->
+        <main class="main medium ">
+            <div id="main-div">
+                <!-- Colonna risultato valore sorgente -->
+                <div class="num-div">
+                    <h1 class="result" id="result1"></h1>
+                </div>
+
+                <div id="convert-div">
+                    <h1>Temperature Converter</h1>
+                    <h2>Fahreneit-Celsius-Kelvin</h2>
+
+                    <!-- Selettori unita di partenza/arrivo -->
+                    <div id="radio-divs">
+                        <div class="radio-div" id="from">
+                            <h3>From:</h3>
+
+                            <div class="label-input">
+                                <input class="inp-from" type="radio" name="temp1" id="celsius-from">
+                                <label for="celsius">Celsius</label>
+                            </div>
+
+                            <div class="label-input">
+                                <input class="inp-from" type="radio" name="temp1" id="far-from">
+                                <label for="far">Fahreneit</label>
+                            </div>
+
+                            <div class="label-input">
+                                <input class="inp-from" type="radio" name="temp1" id="kelvin-from">
+                                <label for="kelvin">Kelvin</label>
+                            </div>
+                        </div>
+
+                        <div class="radio-div" id="to">
+                            <h3>To:</h3>
+
+                            <div class="label-input">
+                                <input class="inp-to" type="radio" name="temp" id="celsius-to">
+                                <label for="celsius">Celsius</label>
+                            </div>
+
+                            <div class="label-input">
+                                <input class="inp-to" type="radio" name="temp" id="far-to">
+                                <label for="far">Fahreneit</label>
+                            </div>
+
+                            <div class="label-input">
+                                <input class="inp-to" type="radio" name="temp" id="kelvin-to">
+                                <label for="kelvin">Kelvin</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Input temperatura e trigger conversione -->
+                    <label id="lab-temp">Insert temperature:</label>
+                    <input class="medium" type="text" id="textSec" placeholder="Write here...">
+                    <button id="but" class="medium">Get the convertion!</button>
+                </div>
+
+                <!-- Colonna risultato valore convertito -->
+                <div class="num-div">
+                    <h1 class="result" id="result2"></h1>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

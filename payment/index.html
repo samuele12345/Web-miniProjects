@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--aggiunge il font inter-->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Payment</title>
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <main>
+            <!-- Card principale dell'esercizio sui metodi di pagamento -->
+            <div id="main-div">
+                <h1 id="title">Choose a payment metod</h1>
+                
+                <!-- Ogni label racchiude radio e testo per rendere cliccabile tutta la riga -->
+                <div id="payment-div">
+                    <label class="option-div" id="p-option">
+                        <input type="radio" id="paypal" name="option">
+                        <span id="p-label">PayPal</span>
+                    </label>
+                    
+                    <label class="option-div" id="m-option">
+                        <input type="radio" id="mastercard" name="option">
+                        <span id="m-label">Mastercard</span>
+                    </label>
+
+                    <label class="option-div" id="v-option">
+                        <input type="radio" id="visa" name="option">
+                        <span id="v-label">Visa</span>
+                    </label>
+                </div>
+
+                <!-- Bottone finale che conferma il metodo selezionato -->
+                <button id="button">Submit</button>
+            </div>
+        </main>
+    </body>
+</html>
