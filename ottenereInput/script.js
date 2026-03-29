@@ -6,7 +6,8 @@ let parag = document.querySelector("#par");
 
 // Al click legge il contenuto dell'input e lo mostra a schermo.
 button.onclick = function () {
-    
+    // ottiene un'informazione tramite window
+    // const answare = window.prompt("inserisci il tuo nome")
     const content = document.querySelector("#request");
     result = content.value.trim();
     // Blocca l'invio se l'utente non ha scritto nulla o solo spazi.
