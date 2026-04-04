@@ -1,0 +1,102 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#calc{
+    max-width: 430px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* HSL: hue=0 (base tonalita), saturation=0% (nessun colore, quindi grigio), lightness=20% (grigio scuro). */
+    background-color: hsl(0, 0%, 30%);
+    border-radius: 20px;
+    box-shadow: 6px 4px 10px rgb(53, 53, 53);
+    border-right: 5px solid rgb(44, 44, 44);
+    border-bottom: 5px solid rgb(44, 44, 44);
+}
+
+#display{
+    margin: 15px 20px;
+    width: 80%;
+    font-size: 5rem;
+    font-family: "Orbitron", monospace;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    background-color: hsl(122, 15%, 36%);
+    padding: 0px 0px 0px 10px;
+    border-left: 3px solid hsl(120, 15%, 27%);
+    border-top: 3px solid hsl(120, 15%, 27%);
+}
+
+#div-display{
+    margin: auto;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    font-size: 5rem;
+    background-color: hsl(0, 0%, 14%);
+    color: white;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+}
+
+#keyboard{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonne, ognuna occupa uno spazio */
+    width: 100%;
+    margin: 15px 5px;
+}
+
+button{
+    border-radius: 50px;
+    width: 80px;
+    height: 60px;
+    margin: 5px 5px;
+    background-color: hsl(0, 70%, 67%);
+    box-shadow: 2px 1px 2px grey;
+    font-size: 20px;
+    font-family: "Orbitron", monospace;
+    font-weight: 700;
+    cursor: pointer;
+    border-right: 3px solid rgb(44, 44, 44);
+    border-bottom: 3px solid rgb(44, 44, 44);
+}
+
+button:hover{
+    background-color: hsl(0, 48%, 52%);
+}
+
+button:active{
+    background-color: hsl(0, 81%, 57%);
+}
+
+.op-but{
+    background-color: hsl(32, 92%, 50%);
+}
+
+.op-but:hover{
+    background-color: hsl(34, 91%, 55%);
+}
+
+.op-but:active{
+    background-color: hsl(44, 100%, 50%);
+}
+
+#onOff{
+    background-color: hsl(1, 92%, 50%);
+}

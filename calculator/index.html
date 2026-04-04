@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Calculator</title>
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <div id="calc">
+            <div id="div-display">
+                <input  id="display" readonly>
+            </div>
+            
+            <div id="keyboard">
+                <button onclick="appendToDisplay('+')" class="op-but">+</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('-')" class="op-but">-</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('*')" class="op-but">*</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('/')" class="op-but">/</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button onclick="calculate()" class="op-but">=</button>
+                <button onclick="clearDisp()" class="op-but">C</button>
+                <button onclick="del()" class="op-but">Del</button>
+                <button onclick="onOff()" id="onOff">on/off</button>
+            </div>
+        </div>
+    </body>
+</html>
+
