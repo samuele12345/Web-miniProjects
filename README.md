@@ -8,6 +8,7 @@ Questa repository raccoglie una serie di mini progetti JavaScript pensati per es
 
 - **birthday**: calcola il giorno della settimana a partire dalla data di nascita inserita.
 - **calculator**: calcolatrice web con operazioni base, cancellazione, eliminazione e accensione/spegnimento.
+- **clickMe**: demo interattiva sugli eventi del mouse con effetti al passaggio e al click.
 - **counterProgram**: contatore con incremento, decremento e reset.
 - **cronometro**: cronometro con pulsanti start, pause e reset.
 - **guessTheNumber**: mini gioco per indovinare un numero casuale.
@@ -42,6 +43,7 @@ This repository contains a collection of JavaScript mini projects designed to pr
 
 - **birthday**: calculates the day of the week from a user-provided birth date.
 - **calculator**: web calculator with basic operations, clear, delete, and on/off controls.
+- **clickMe**: interactive mouse events demo with hover and click effects.
 - **counterProgram**: counter with increment, decrement, and reset.
 - **cronometro**: stopwatch with start, pause, and reset controls.
 - **guessTheNumber**: mini game to guess a random number.
