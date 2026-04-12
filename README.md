@@ -12,12 +12,15 @@ Questa repository raccoglie una serie di mini progetti JavaScript pensati per es
 - **counterProgram**: contatore con incremento, decremento e reset.
 - **cronometro**: cronometro con pulsanti start, pause e reset.
 - **guessTheNumber**: mini gioco per indovinare un numero casuale.
+- **jellyfish**: animazione interattiva in cui una medusa si muove nella scena con i tasti freccia.
 - **ottenereInput**: lettura e validazione di un input testuale.
 - **payment**: selezione di un metodo di pagamento con interfaccia semplice.
 - **random**: generazione di numeri casuali tra minimo e massimo.
 - **temperatureCoverter**: conversione tra scale di temperatura.
 - **randomPasGen**: generatore di password casuali con interfaccia web.
+- **sirens**: simulazione di tre sirene attivabili singolarmente con pulsanti start/stop.
 - **speedGame**: gioco di rapidita in cui bisogna fermare il timer nel minor tempo possibile.
+- **stealTheMoon**: piccola scena interattiva che nasconde e ripristina la luna con un pulsante.
 
 ### Tecnologie utilizzate
 
@@ -47,12 +50,15 @@ This repository contains a collection of JavaScript mini projects designed to pr
 - **counterProgram**: counter with increment, decrement, and reset.
 - **cronometro**: stopwatch with start, pause, and reset controls.
 - **guessTheNumber**: mini game to guess a random number.
+- **jellyfish**: interactive animation where a jellyfish moves around the scene with the arrow keys.
 - **ottenereInput**: text input reading and validation.
 - **payment**: payment method selection with a simple interface.
 - **random**: random number generation between minimum and maximum values.
 - **temperatureCoverter**: conversion between temperature scales.
 - **randomPasGen**: random password generator with a web interface.
+- **sirens**: simulation of three sirens that can be started and stopped independently.
 - **speedGame**: reaction-speed game where the goal is to stop the timer as quickly as possible.
+- **stealTheMoon**: small interactive scene that hides and restores the moon with a button.
 
 ### Technologies used
 
