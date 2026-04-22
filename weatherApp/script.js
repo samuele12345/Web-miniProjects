@@ -6,7 +6,7 @@ Il progetto usa l'endpoint current weather per cercare una citta e mostrare i da
 /*
 async function getData(){
     try{
-        const result = await fetch("https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&appid=56ba89cda87159b86c81da9bee6cbe4e")
+        const result = await fetch("https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&appid=YOUR_API_KEY")
 
         if(!result.ok){
             throw new Error("Dati non trovati")
@@ -34,10 +34,17 @@ const cityh1 = document.querySelector(".cityDisplay");
 const temp = document.querySelector(".tempDisplay");
 const umidity = document.querySelector(".umidityDisplay");
 const emoji = document.querySelector(".weatherEmoji");
-const apiKey = "56ba89cda87159b86c81da9bee6cbe4e"
+// Legge la chiave dal file locale config.local.js senza salvarla nel codice versionato.
+const apiKey = window.WEATHER_APP_CONFIG?.OPENWEATHER_API_KEY ?? "";
 
 form.addEventListener("submit", async event =>{
     event.preventDefault(); // serve ad evitare che la pagina si refreshi da sola
+
+    // Blocca la richiesta se la configurazione locale non e stata ancora compilata.
+    if(!apiKey){
+        displayError("Missing OpenWeather API key. Configure weatherApp/config.local.js")
+        return;
+    }
 
     const city = cityInput.value;
 
@@ -56,7 +63,8 @@ form.addEventListener("submit", async event =>{
 
 async function getWeatherData(city){
     // Se non specifichi units, OpenWeather restituisce la temperatura in Kelvin.
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=56ba89cda87159b86c81da9bee6cbe4e`;
+    // encodeURIComponent evita errori nella query se il nome della citta contiene spazi o caratteri speciali.
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&APPID=${apiKey}`;
 
     const response = await fetch(apiUrl);
 
@@ -65,8 +73,6 @@ async function getWeatherData(city){
     }
 
     const data = await response.json()
-    console.log(response);
-    console.log(data)
 
     return await data;
 
