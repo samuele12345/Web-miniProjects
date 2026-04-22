@@ -23,6 +23,7 @@ Questa repository raccoglie una serie di mini progetti JavaScript pensati per es
 - **sirens**: simulazione di tre sirene attivabili singolarmente con pulsanti start/stop.
 - **speedGame**: gioco di rapidita in cui bisogna fermare il timer nel minor tempo possibile.
 - **stealTheMoon**: piccola scena interattiva che nasconde e ripristina la luna con un pulsante.
+- **weatherApp**: ricerca meteo per citta tramite OpenWeatherMap con visualizzazione di temperatura, umidita, emoji e messaggi di errore.
 
 ### Tecnologie utilizzate
 
@@ -63,6 +64,7 @@ This repository contains a collection of JavaScript mini projects designed to pr
 - **sirens**: simulation of three sirens that can be started and stopped independently.
 - **speedGame**: reaction-speed game where the goal is to stop the timer as quickly as possible.
 - **stealTheMoon**: small interactive scene that hides and restores the moon with a button.
+- **weatherApp**: city-based weather lookup using OpenWeatherMap, with temperature, humidity, emoji feedback, and error handling.
 
 ### Technologies used
 

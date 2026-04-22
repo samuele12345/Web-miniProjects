@@ -205,7 +205,7 @@ fetchData();
 
 
 // generazione dell'immagine di un pokemon tramite il nome inserito dall'utente
-async function fetchData(name){
+async function fetchData(){
     // immagine in cui verrà mostrato lo sprite del pokemon
     const img = document.querySelector("#pokemonSprite")
     // paragrafo usato per mostrare un eventuale messaggio di errore
@@ -254,4 +254,10 @@ async function fetchData(name){
         console.log(error);
     }
 }
+
+document.addEventListener("keydown", event =>{
+    if(event.key === "Enter"){
+        fetchData()
+    }
+})
 

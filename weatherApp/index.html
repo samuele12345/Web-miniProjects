@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="vieport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <link href="styles.css" rel="stylesheet">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <!-- Form principale per inserire la citta da cercare. -->
+        <form class="weather-form">
+            <input class="city-input form-comp" type="text"  placeholder="City">
+            <button type="submit" class="but form-comp">Get Weather</button>
+        </form>
+
+        <!-- Card riutilizzata sia per i dati meteo sia per i messaggi di errore. -->
+        <div class="card">
+            <!--Win + . per mettere emoji
+            <h1 class="cityDisplay">Miami</h1>
+            <p class="tempDisplay text">90°F</p>
+            <p class="umidityDisplay text">Humidity: 75%</p>
+            <p class="umidityDisplay text">Clear sky</p>
+            <p class="weatherEmoji">😊</p>
+            <p class="errorDisplay text">No data found...</p>
+            -->
+            <h1 class="cityDisplay data"></h1>
+            <p class="tempDisplay text data"></p>
+            <p class="umidityDisplay text data"></p>
+            <p class="weatherEmoji data"></p>
+            <!-- Messaggio mostrato quando la richiesta fallisce o l'input e vuoto. -->
+            <p class="errorDisplay text"></p>
+            
+        </div>
+    </body>
+</html>

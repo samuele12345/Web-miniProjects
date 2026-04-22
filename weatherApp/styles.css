@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(238, 237, 237, 0.768);
+    font-family: Arial;
+}
+
+.card{
+    /* La card resta nascosta finche non arrivano dati validi o un errore da mostrare. */
+    background: linear-gradient(rgba(86, 215, 86, 0.756), rgba(81, 81, 213, 0.805));
+    margin-top: 30px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    box-shadow: 2px 4px 10px rgb(101, 99, 99);
+    visibility: hidden;
+    font-weight: 600;
+}
+
+.cityDisplay{
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.weatherEmoji{
+    font-size: 90px;
+}
+
+.text{
+    font-size: 30px;
+}
+
+.city-input{
+    font-weight: 700;
+}
+
+.city-input:hover{
+    background: rgb(205, 202, 202);
+}
+
+.but{
+    background: rgba(119, 179, 192, 0.755);
+    font-weight: 550;
+}
+
+
+.but:hover{
+    background: rgba(136, 204, 220, 0.755);
+}
+
+.form-comp{
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.errorDisplay{
+    /* L'errore viene mostrato solo via JavaScript quando serve. */
+    color: rgba(55, 53, 53, 0.759);
+    font-size: 20px;
+    display: none;
+}
+
+.data{
+    /* I dati meteo partono nascosti e vengono resi visibili dopo una ricerca valida. */
+    display: none;
+}
+
