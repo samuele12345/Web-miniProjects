@@ -35,6 +35,9 @@ const temp = document.querySelector(".tempDisplay");
 const umidity = document.querySelector(".umidityDisplay");
 const emoji = document.querySelector(".weatherEmoji");
 // Legge la chiave dal file locale config.local.js senza salvarla nel codice versionato.
+// La vecchia chiave esposta e stata eliminata e non va piu riutilizzata.
+// `?.` prova a leggere OPENWEATHER_API_KEY solo se WEATHER_APP_CONFIG esiste.
+// `?? ""` usa una stringa vuota se il valore e null o undefined, evitando errori a runtime.
 const apiKey = window.WEATHER_APP_CONFIG?.OPENWEATHER_API_KEY ?? "";
 
 form.addEventListener("submit", async event =>{

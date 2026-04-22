@@ -17,7 +17,7 @@ Questa repository raccoglie una serie di mini progetti JavaScript pensati per es
 - **payment**: selezione di un metodo di pagamento con interfaccia semplice.
 - **pokemonGenerator**: ricerca di un Pokémon per nome e visualizzazione dello sprite tramite richiesta all'API PokeAPI, con gestione degli errori.
 - **random**: generazione di numeri casuali tra minimo e massimo.
-- **temperatureCoverter**: conversione tra scale di temperatura.
+- **temperatureConverter**: conversione tra scale di temperatura.
 - **randomPasGen**: generatore di password casuali con interfaccia web.
 - **rockPaperScissors**: classico gioco carta-forbici-sasso contro il computer.
 - **sirens**: simulazione di tre sirene attivabili singolarmente con pulsanti start/stop.
@@ -39,6 +39,16 @@ Questa repository raccoglie una serie di mini progetti JavaScript pensati per es
 
 Non sono richieste dipendenze esterne o procedure di build.
 
+### Note privacy per weatherApp
+
+Il progetto `weatherApp` usa una chiave API di OpenWeatherMap letta da `weatherApp/config.local.js`, file pensato per l'uso locale e da escludere dal versionamento tramite `.gitignore`.
+
+- Non inserire la chiave direttamente in `script.js` o in altri file tracciati da Git.
+- Se `config.local.js` e gia stato committato almeno una volta, `.gitignore` da solo non basta: il file va anche rimosso dall'indice Git.
+- Se una chiave e stata pubblicata per errore, deve essere rigenerata o revocata dal provider.
+- La vecchia chiave esposta e stata eliminata e non deve piu essere riutilizzata.
+- Poiche `weatherApp` e un frontend statico, la chiave resta comunque visibile nelle richieste del browser: per una protezione reale serve un backend o una serverless function che faccia la chiamata all'API.
+
 ---
 
 ## English
@@ -58,7 +68,7 @@ This repository contains a collection of JavaScript mini projects designed to pr
 - **payment**: payment method selection with a simple interface.
 - **pokemonGenerator**: searches for a Pokémon by name and displays its sprite using the PokeAPI, with error handling for invalid input.
 - **random**: random number generation between minimum and maximum values.
-- **temperatureCoverter**: conversion between temperature scales.
+- **temperatureConverter**: conversion between temperature scales.
 - **randomPasGen**: random password generator with a web interface.
 - **rockPaperScissors**: classic rock-paper-scissors game against the computer.
 - **sirens**: simulation of three sirens that can be started and stopped independently.
@@ -79,3 +89,13 @@ This repository contains a collection of JavaScript mini projects designed to pr
 3. Interact with the page to test its behavior.
 
 No external dependencies or build steps are required.
+
+### Privacy notes for weatherApp
+
+The `weatherApp` project uses an OpenWeatherMap API key loaded from `weatherApp/config.local.js`, which is intended for local use and should be excluded from version control through `.gitignore`.
+
+- Do not place the API key directly in `script.js` or any other tracked file.
+- If `config.local.js` has already been committed at least once, `.gitignore` alone is not enough: the file must also be removed from the Git index.
+- If a key was exposed by mistake, it should be rotated or revoked from the provider dashboard.
+- The previously exposed key has been removed and must not be reused.
+- Because `weatherApp` is a static frontend, the key is still visible in browser requests: real protection requires a backend or serverless function that performs the API call.
